@@ -1,0 +1,114 @@
+.section {
+    background: var(--surface-dark);
+}
+
+.header {
+    border-bottom-color: var(--border-dark) !important;
+}
+
+.headerSub {
+    font-size: 0.9rem;
+    color: var(--light-grey);
+    text-align: right;
+    max-width: 260px;
+    line-height: 1.5;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2.5rem;
+    background: var(--surface-mid);
+    border: 1px solid var(--border-dark);
+    border-radius: 4px;
+    color: var(--cream);
+    transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.cardTop {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.index {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+}
+
+.type {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--light-grey);
+    flex: 1;
+    letter-spacing: 0.04em;
+}
+
+.arrow {
+    color: var(--light-grey);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover .arrow {
+    color: var(--accent);
+    transform: translate(3px, -3px);
+}
+
+.title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--cream);
+    transition: color 0.2s ease;
+}
+
+.card:hover .title {
+    color: var(--accent-light);
+}
+
+.desc {
+    font-size: 0.9rem;
+    color: rgba(245, 240, 234, 0.6);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.techRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border-dark);
+}
+
+.techTag {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--light-grey);
+    padding: 0.3rem 0.6rem;
+    border: 1px solid var(--border-dark);
+    border-radius: 2px;
+    letter-spacing: 0.04em;
+}

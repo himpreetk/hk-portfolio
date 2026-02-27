@@ -1,0 +1,134 @@
+.topHeader {
+    border-bottom-color: var(--border-light);
+}
+
+.twoCol {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+    .twoCol {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.colTitle {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--warm-grey);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+/* Degrees */
+.degreeList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.degreeItem {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.degreeInstitution {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--warm-grey);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.degreeLocation {
+    color: var(--accent);
+}
+
+.degreeName {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.2;
+}
+
+.degreeNote {
+    font-size: 0.85rem;
+    color: var(--warm-grey);
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Prior */
+.priorList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.priorItem {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border-light);
+}
+
+.priorItem:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.priorPeriod {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--light-grey);
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    padding-top: 0.1em;
+}
+
+.priorContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.priorRole {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.priorCompany {
+    font-size: 0.82rem;
+    color: var(--warm-grey);
+}
+
+/* Interests */
+.interests {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border-light);
+}
+
+.interestTags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}

@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
+
+/* ============================================
+   DESIGN TOKENS
+   ============================================ */
+:root {
+  /* Core palette */
+  --cream: #F5F0EA;
+  --cream-dark: #EDE7DC;
+  --black: #0E0E0E;
+  --charcoal: #1A1A1A;
+  --charcoal-light: #2A2A2A;
+  --warm-grey: #6B6560;
+  --light-grey: #A8A39D;
+
+  /* Accent: warm amber/copper */
+  --accent: #C8963E;
+  --accent-light: #E0B469;
+  --accent-dark: #A07830;
+
+  /* Surface colors */
+  --surface-dark: #141414;
+  --surface-mid: #1E1E1E;
+  --border-dark: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(14, 14, 14, 0.1);
+
+  /* Typography */
+  --font-display: 'DM Serif Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--cream);
+  color: var(--black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   ============================================ */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 7rem 0;
+}
+
+.section--dark {
+  background-color: var(--charcoal);
+  color: var(--cream);
+}
+
+/* ============================================
+   TYPOGRAPHY
+   ============================================ */
+.display-xl {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.display-lg {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.display-md {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--warm-grey);
+}
+
+.label--dark {
+  color: var(--light-grey);
+}
+
+/* ============================================
+   ACCENT ELEMENTS
+   ============================================ */
+.accent-text {
+  color: var(--accent);
+}
+
+.accent-border-left {
+  border-left: 3px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+.underline-accent {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-accent::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent);
+  border-radius: 1px;
+}
+
+/* ============================================
+   SECTION HEADERS
+   ============================================ */
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-light);
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.section-header--dark {
+  border-bottom-color: var(--border-dark);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ============================================
+   PILL / TAG
+   ============================================ */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.85rem;
+  border-radius: 3px;
+  background: rgba(14, 14, 14, 0.06);
+  border: 1px solid var(--border-light);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.tag:hover {
+  background: var(--black);
+  color: var(--cream);
+}
+
+.tag--dark {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--border-dark);
+  color: var(--cream);
+}
+
+.tag--dark:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--black);
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid var(--black);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--black);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: var(--black);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid rgba(14, 14, 14, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-secondary:hover {
+  border-color: var(--black);
+  background: var(--black);
+  color: var(--cream);
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: var(--cream);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 3px;
+  border: 1px solid rgba(245, 240, 234, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.02em;
+}
+
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   CARD BASE
+   ============================================ */
+.card {
+  padding: 2rem;
+  border-radius: 4px;
+  background: white;
+  border: 1px solid var(--border-light);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 30px rgba(14, 14, 14, 0.1);
+  transform: translateY(-3px);
+}
+
+.card--dark {
+  background: var(--surface-mid);
+  border: 1px solid var(--border-dark);
+}
+
+.card--dark:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   DIVIDERS
+   ============================================ */
+.divider {
+  width: 100%;
+  height: 1px;
+  background: var(--border-light);
+  margin: 3rem 0;
+}
+
+.divider--dark {
+  background: var(--border-dark);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.anim-slide-up {
+  animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.anim-fade {
+  animation: fadeIn 0.6s ease both;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--light-grey);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--warm-grey);
+}
