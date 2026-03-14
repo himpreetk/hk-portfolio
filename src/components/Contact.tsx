@@ -7,12 +7,12 @@ export default function Contact() {
                 <div className={styles.inner}>
 
                     <div className={styles.cta}>
-                        <span className="section-number">05</span>
+                        <span className="section-number">06</span>
                         <h2 className={`display-xl ${styles.ctaHeading}`}>
-                            Let's work<br /><em>together.</em>
+                            Let&apos;s work<br /><em>together.</em>
                         </h2>
                         <p className={styles.ctaSub}>
-                            Actively looking for Quality Engineering roles in the UK market.
+                            Actively looking for Quality Engineering roles globally.
                             Available to start immediately.
                         </p>
                         <div className={styles.ctaActions}>

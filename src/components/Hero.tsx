@@ -7,7 +7,7 @@ export default function Hero() {
             {/* ── Top bar ── */}
             <div className={styles.topBar}>
                 <div className={`container ${styles.topBarInner}`}>
-                    <span className={styles.availDot}><span className={styles.dot} />Open to UK Opportunities</span>
+                    <span className={styles.availDot}><span className={styles.dot} />Open to Global Opportunities</span>
                     <div className={styles.topContacts}>
                         <a href="mailto:kaurhimpreet95@gmail.com" className={styles.topContact}>kaurhimpreet95@gmail.com</a>
                         <span className={styles.topSep}>·</span>
